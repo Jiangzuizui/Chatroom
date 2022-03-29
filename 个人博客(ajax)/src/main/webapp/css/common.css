@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/cat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    /* 和父容器body一样宽 */
+    width:100%;
+    height:50px;
+    /* 背景颜色:rgba也可以设置,第四个参数是透明度0-1,1最不透明 */
+    background-color: rgba(7,31,8,0.4);
+    /* 左右两个子div分两列,使用弹性布局 */
+    display: flex;
+    /* 子div内容垂直居中 */
+    align-items: center;
+
+}
+
+.nav-left {
+    /* 占据父容器nav */
+    width: 40%;
+    height: 40px;
+    display: flex;
+}
+
+.nav-left>img {
+    /* 左边间隔一定距离 */
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-left>span {
+    /* font-size: 1.2em; */
+    margin-left: 10px;
+    /* 文本占据整个高度 */
+    line-height: 40px;
+    color: white;
+}
+
+.nav-right {
+    width: 60%;
+    height: 40px;
+    /* 3个a标签也要有高宽,靠右,父元素使用弹性布局 */
+    display: flex;
+    align-items: center;
+    /* 水平靠右 */
+    justify-content: flex-end;
+    /* 最后一个a标签右边多留一些空白 */
+    padding-right: 50px;
+
+}
+
+.nav-right>a {
+    line-height: 40px;
+    /* 去除下划线 */
+    text-decoration: none;
+    /* 颜色 */
+    color: white;
+    margin-right: 20px;
+}
+
+/* 版心 */
+.container {
+    /* 固定宽度:页面宽度多,居中;页面宽度少,保留版心 */
+    width: 1000px;
+    /* 高度:和导航栏一起占据页面整个高度 */
+    /* calc:计算函数,注意-前后都有空格 */
+    height:calc(100% - 50px);
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 两个子div分一行两列,父容器container使用弹性布局 */
+    display:flex;
+    /* 左右子div都设置宽度,中间留空 */
+    justify-content: space-between;
+}
+
+.container-left {
+    width: 200px;
+    height: 100%;
+
+}
+
+.card {
+    padding: 30px;
+    /* 背景色 */
+    background-color: rgba(255,255,255,0.8);
+    /* 圆角矩形 */
+    border-radius: 7px;
+
+}
+.card>img {
+    width:140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.card>h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card>a {
+    /* 去除下划线 */
+    text-decoration: none;
+    color:gray;
+    /* a标签是内联元素,设置宽高和内外边距是无效的 */
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.counter {
+    width:120px;
+    margin:10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.counter>span {
+    width:80px;
+    text-align: center;
+}
+
+.container-right {
+    /* 设置795,1000-200-795=5就是中间留空的地方 */
+    width: 795px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 7px;
+    /* 内容超长,出现滚动条 */
+    overflow: scroll;
+}
+
+.row {
+    padding: 20px;
+}
+.detail {
+    padding: 50px 30px;
+}
+
+.row>.title,
+.detail>.title {
+    font-size: 20px;
+    /* 加粗 */
+    font-weight: 700;
+    text-align: center;
+}
+.row>.date,
+.detail>.date {
+    text-align: center;
+    color: green;
+    margin-top: 15px;
+}
+.row>.desc,
+.detail>.desc>p {
+    /* 缩进 */
+    text-indent: 2em;
+    margin-top: 15px;
+}
+
+.row a {
+    text-decoration: none;
+    /* text-align: center; */
+    /* a标签直接水平居中无效,因为整个a标签占据一行 */
+    border:2px solid black;
+    color:black;
+    padding: 8px;
+}
+.row>.to-detail {
+    margin-top: 15px;
+    text-align: center;
+}
+.row a:hover {
+    /* 鼠标器放上去的效果 */
+    background-color: black;
+    color: white;
+}

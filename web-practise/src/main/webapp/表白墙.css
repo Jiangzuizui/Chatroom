@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+    /* 设置上下边距 上下40,左右0*/
+    margin: 40px 0;
+    text-align: center;
+}
+#desc {
+    text-align: center;
+    font-size: 0.8em;
+    color: gray;
+    margin-bottom: 10px;
+}
+div {
+    height: 50px;
+    /* div中的子元素设置为弹性布局 */
+    /* display: flex; */
+    /* 一:div水平居中 */
+    /* width: 400px;
+    margin:0 auto; */
+    /* 二:div占据整行,设置为弹性布局 */
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+
+}
+div>span {
+    height: 30px;
+    width: 50px;
+}
+div>input {
+    height: 40px;
+    width: 200px;
+    font-size: 22px;
+    line-height: 30px;
+    /* 上下不间隔,左右间隔10 */
+    padding: 0 10px;
+}
+div>button {
+    width: 250px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    /* 消除边框 */
+    border: none;
+}
+
+/* 按钮点击效果 */
+#submit:active {
+    background-color: gray;
+}
+
+#show {
+    text-align: center;
+}

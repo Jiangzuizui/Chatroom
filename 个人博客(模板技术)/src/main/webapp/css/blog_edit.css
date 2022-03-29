@@ -1,0 +1,37 @@
+#edit-container {
+    width: 900px;
+    /* 看页面开发者工具里边,这个div高度不是我们设置的剩下全部高度,说明这里没生效 */
+    /* calc里边啊,-前后有空格 */
+    height: calc(100% - 50px);
+    margin:0 auto;
+}
+#edit-title {
+    height: 50px;
+    display: flex;
+    /* 父容器高度高一点,子容器矮一点,这样设置垂直居中的弹性布局,上下就可以保留一些间距 */
+    align-items: center;
+    /* 要想让文本框和按钮中间保留间距,就要设置水平方向 */
+    justify-content: space-between;
+}
+#edit-title>input {
+    width:89%;
+    height: 40px;
+    /* 上下无边距,左右是10 */
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+#edit-title>button {
+    width:10%;
+    height: 40px;
+    border:none;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    /* 动画过渡:了解 all表示所有伪类样式在0.3秒内变化*/
+    transition: all 0.3s;
+}
+#edit-title>button:active {
+    background-color: thistle;
+}
